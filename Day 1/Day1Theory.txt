@@ -1,0 +1,79 @@
+1. What is Emmet?
+
+Ans - “Emmet is a plug in for many popular text editors which greatly improves HTML & CSS workflow:”
+      Tip: While typing the Emmet Abbreviations, you can press Ctrl + Space see what will be generated(Inside a pop up)
+      Reference - https://medium.com/@kartik2406/web-development-with-vs-code-part-1-emmet-6af80f0f630c
+
+2. Difference between a Library and Framework?
+
+Ans - Both frameworks and libraries are code written by someone else that is used to help solve common problems.
+      A library is like going to Ikea. You already have a home, but you need a bit of help with furniture. You don’t feel like making your own table from scratch. Ikea allows you to pick and             choose different things to go in your home. You are in control.
+      A framework, on the other hand, is like building a model home. You have a set of blueprints and a few limited choices when it comes to architecture and design. Ultimately, the contractor and blueprint are in control. And they will let you know when and where you can provide your input.
+
+      The technical difference between a framework and library lies in a term called inversion of control.
+
+When you use a library, you are in charge of the flow of the application. You are choosing when and where to call the library. When you use a framework, the framework is in charge of the flow. It provides some places for you to plug in your code, but it calls the code you plugged in as needed.
+
+3. What is CDN? Why do we use it?
+
+Ans - A content delivery network (CDN) is a geographically distributed group of servers that caches content close to end users. A CDN allows for the quick transfer of assets needed for loading Internet content, including HTML pages, JavaScript files, stylesheets, images, and videos.
+Why Do We Use CDNs?
+Speed: To ensure faster content delivery to users, regardless of their location.
+Reliability: To provide high availability and redundancy.
+Security: To protect against cyber threats like DDoS attacks and to secure content.
+Cost Efficiency: To reduce bandwidth and infrastructure costs by offloading traffic from origin servers.
+Scalability: To manage varying levels of traffic without compromising performance.
+
+4. Why is React known as React?
+
+Ans - React is a JavaScript library for building user interfaces. It was developed by Facebook, and the name “React” was chosen because it is meant to help developers build user interfaces that are fast and responsive, or “reactive.” The library was designed to “react” to changes in data.
+
+When data in a React application changes, the components that depend on that data are automatically updated, which allows for efficient and seamless updates to the user interface. The name “React” reflects this reactive nature of the library.
+
+5. What is crossorigin in script tag?
+Ans - Crossorigin attribute is used when a script on one domain is trying to fetch or interact with resources from another domain.
+🔻Here we're are fetching CDN links of React.
+
+🔻The crossorigin attribute can have two values:
+1. crossorigin="anonymous":
+ It means that the script should be fetched without sending any credentials (like cookies or HTTP authentication). This is suitable for scripts that are public and don't require authentication.
+
+2. crossorigin="use-credentials":
+it means that the script should be fetched with credentials. This is appropriate when the script requires authentication or if the server needs to identify the user making the request.
+
+6. What is diference between React and ReactDOM
+
+Ans - React-DOM :
+
+React: React is a javascript library, designed for building better user interfaces.
+
+React-DOM: React-DOM is a complimentary library to React which glues React to the browser DOM
+
+In a nutshell, Whenever we use component, classes, elements, etc. We’re using React and whenever we use methods like render() or findDOMNode() we’re using React-DOM.
+
+Why did the React team decide to split React and React-DOM into two different libraries?
+
+Because React-DOM binds the idea of React to a web browser. And ideally, React has nothing to do with a browser or web for that matter. That’s why we’re seeing tools and frameworks like React-Native, React-Three being developed. These tools and frameworks don’t use React-DOM, but they do in fact use the idea behind React.
+
+7. What is difference between react.development.js and react.production.js files via CDN?
+
+Ans - When using React via a CDN, you'll typically encounter two versions of the library:
+react.development.js:
+This version is meant for development environments. It includes extra warnings and error messages to help you debug your application. However, this comes at the cost of performance, as the file size is larger and the additional checks slow down execution.
+react.production.js:
+This version is optimized for production environments. It's minified and compressed to reduce file size, and all warnings and error messages are removed to improve performance.
+In summary:
+Use react.development.js when:
+Developing your application locally.
+You want helpful warnings and error messages in the console.
+Use react.production.js when:
+Deploying your application to production.
+You want the smallest possible file size and optimal performance.
+
+8. What is async and defer?
+
+Ans - In JavaScript, the async and defer attributes in a <script> tag help a website load faster by preventing scripts from blocking rendering:
+Async
+Downloads the script asynchronously in the background, and executes it as soon as it's downloaded, potentially before the HTML document is fully parsed. This attribute is a good choice for independent scripts and externally located scripts, because it doesn't pause HTML parsing and other scripts don't wait for it.
+Defer
+Downloads the script asynchronously in the background, but only executes it after the HTML document is fully parsed, but before the DOMContentLoaded event. This attribute is useful when you need to maintain script execution order or depend on the DOM structure. It also loads scripts in the order specified, allowing you to structure which script comes first.
