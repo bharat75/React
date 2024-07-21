@@ -1,0 +1,5 @@
+# Ignore node_modules, .parcel-cache, and dist directories inside the Day 2/Coding directory
+Day\ 2/Coding/node_modules/
+Day\ 2/Coding/.parcel-cache/
+Day\ 2/Coding/dist/
+Day\ 2/Coding/package.json
