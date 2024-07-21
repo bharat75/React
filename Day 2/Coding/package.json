@@ -1,0 +1,14 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "i am learning react",
+  "main": "App.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Bharat Shubham",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
