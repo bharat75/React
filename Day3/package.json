@@ -1,11 +1,11 @@
 {
-  "name": "react",
+  "name": "day3",
   "version": "1.0.0",
-  "description": "i am learning react",
+  "description": "Day 3",
+  "main": "App.js",
   "scripts": {
-    "test": "test",
-    "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "start": "npx parcel index.html",
+    "test": "test"
   },
   "author": "Bharat Shubham",
   "license": "ISC",
