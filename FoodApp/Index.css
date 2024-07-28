@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   margin: 10px;
+  border: 1px solid black;
 }
 
 .navItems > ul {
@@ -11,4 +12,26 @@
 
 .navItems > ul > li {
   padding: 10px;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+.listing {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.restrauntCard {
+  margin: 10px;
+  width: 200px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.restrauntCard > img {
+  width: 200px;
+  height: 200px;
 }
