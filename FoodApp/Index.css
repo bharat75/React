@@ -1,0 +1,14 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.navItems > ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.navItems > ul > li {
+  padding: 10px;
+}
