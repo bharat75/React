@@ -1880,7 +1880,9 @@ const BodyComponent = () => {
     <div className="listing">
       {/* <RestrauntCard {...restaurantList[0].data} /> */}
       {restaurantList.map((listingCards) => {
-        return <RestrauntCard {...listingCards.data} />;
+        return (
+          <RestrauntCard {...listingCards.data} key={listingCards.data.id} />
+        );
       })}
     </div>
   );
