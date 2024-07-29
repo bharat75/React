@@ -1859,8 +1859,7 @@ const restaurantList = [
   },
 ];
 
-const RestrauntCard = ({ listing }) => {
-  const { cloudinaryImageId, cuisines, name, avgRating } = listing.data;
+const RestrauntCard = ({ name, cloudinaryImageId, cuisines, avgRating }) => {
   return (
     <div className="restrauntCard">
       <img
@@ -1869,8 +1868,8 @@ const RestrauntCard = ({ listing }) => {
           cloudinaryImageId
         }
       />
-      <h4>{cuisines.join(", ")}</h4>
       <h4>{name}</h4>
+      <h4>{cuisines.join(", ")}</h4>
       <h4>{avgRating}</h4>
     </div>
   );
@@ -1879,21 +1878,10 @@ const RestrauntCard = ({ listing }) => {
 const BodyComponent = () => {
   return (
     <div className="listing">
-      <RestrauntCard listing={restaurantList[0]} />
-      <RestrauntCard listing={restaurantList[1]} />
-      <RestrauntCard listing={restaurantList[2]} />
-      <RestrauntCard listing={restaurantList[3]} />
-      <RestrauntCard listing={restaurantList[4]} />
-      <RestrauntCard listing={restaurantList[5]} />
-      <RestrauntCard listing={restaurantList[6]} />
-      <RestrauntCard listing={restaurantList[7]} />
-      <RestrauntCard listing={restaurantList[8]} />
-      <RestrauntCard listing={restaurantList[9]} />
-      <RestrauntCard listing={restaurantList[10]} />
-      <RestrauntCard listing={restaurantList[11]} />
-      <RestrauntCard listing={restaurantList[12]} />
-      <RestrauntCard listing={restaurantList[13]} />
-      <RestrauntCard listing={restaurantList[14]} />
+      {/* <RestrauntCard {...restaurantList[0].data} /> */}
+      {restaurantList.map((listingCards) => {
+        return <RestrauntCard {...listingCards.data} />;
+      })}
     </div>
   );
 };
