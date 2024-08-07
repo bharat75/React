@@ -3,11 +3,11 @@ import RestrauntCard from "./RestrauntCard.js";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer.js";
 
-function filterData(searchtxt, restraunts) {
-  const filterData = restraunts.filter((restraunt) =>
-    restraunt.data.name.includes(searchtxt)
+function filterData(searchtxt, restaurants) {
+  const searchTextLower = searchtxt.toLowerCase();
+  return restaurants.filter((restaurant) =>
+    restaurant.info.name.toLowerCase().includes(searchTextLower)
   );
-  return filterData;
 }
 
 const BodyComponent = () => {
@@ -37,7 +37,12 @@ const BodyComponent = () => {
     setFilteredRestraunts(fetchedRestraunts);
   }
 
-  return filteredRestraunts.length === 0 ? (
+  if (!allRestraunts) return null;
+
+  if (filteredRestraunts.length == 0)
+    return <h1>No Restraunts Found for you!!</h1>;
+
+  return allRestraunts.length === 0 ? (
     <Shimmer />
   ) : (
     <>
