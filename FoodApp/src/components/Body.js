@@ -11,9 +11,6 @@ function filterData(searchtxt, restaurants) {
 }
 
 const BodyComponent = () => {
-  //const searchtxt = "";
-  //const abc = "hello";
-  //const [abc] = useState("hello");
   const [searchtxt, setSearchText] = useState("");
   const [filteredRestraunts, setFilteredRestraunts] = useState([]);
   const [allRestraunts, setAllRestraunts] = useState([]);
@@ -38,9 +35,6 @@ const BodyComponent = () => {
   }
 
   if (!allRestraunts) return null;
-
-  if (filteredRestraunts.length == 0)
-    return <h1>No Restraunts Found for you!!</h1>;
 
   return allRestraunts.length === 0 ? (
     <Shimmer />
